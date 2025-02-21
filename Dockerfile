@@ -106,7 +106,7 @@ RUN set -ex && wget "https://github.com/libexpat/libexpat/releases/download/R_$(
 WORKDIR /tmp
 # renovate: datasource=github-releases depName=NLnetLabs/unbound versioning=semver
 ARG LIBUNBOUND_VERSION=release-1.22.0
-ARG LIBUNBOUND_CHECKSUM=4e32a36d57cda666b1c8ee02185ba73462330452162d1b9c31a5b91a853ba946
+ARG LIBUNBOUND_CHECKSUM=0076736fc40298eb6252705e6e158462c6b24d06
 RUN set -ex && wget "https://github.com/NLnetLabs/unbound/archive/refs/tags/${LIBUNBOUND_VERSION}.tar.gz"  && \
     echo "${LIBUNBOUND_CHECKSUM}" "${LIBUNBOUND_VERSION}.tar.gz" | sha256sum -c && \
     tar -xzf ${LIBUNBOUND_VERSION}.tar.gz && \
